@@ -27,10 +27,8 @@ public class FiboncciSeries {
     public static int bruteForceFib(int n) {
 
         // This method is greedy in nature
-        if (n == 0) {
-            return 0;
-        } else if (n == 1) {
-            return 1;
+        if (n == 0 || n == 1) {
+            return n;
         } else {
             return bruteForceFib(n - 2) + bruteForceFib(n - 1);
         }
