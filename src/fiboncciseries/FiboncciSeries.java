@@ -22,6 +22,7 @@ public class FiboncciSeries {
         map = new HashMap<>();
         System.out.println("Fibonacci of 5 is: " + bruteForceFib(5));
         System.out.println("Fibonacci of 5 is: " + memorizedFib(5));
+        System.out.println("Fibonacci of 5 is: " + fib(5));
     }
 
     public static int bruteForceFib(int n) {
@@ -52,6 +53,25 @@ public class FiboncciSeries {
 
         return map.get(n);
 
+    }
+
+    public static int fib(int n) {
+
+        int val = 1;
+        int prev = 0;
+
+        return fib(n, val, prev);
+
+    }
+
+    private static int fib(int term, int val, int prev) {
+        if (term == 0) {
+            return prev;
+        }
+        if (term == 1) {
+            return val;
+        }
+        return fib(term - 1, val + prev, val);
     }
 
 }
