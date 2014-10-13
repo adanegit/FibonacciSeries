@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class FiboncciSeries {
 
-   
     private static Map<Integer, Integer> map;
 
     public static void main(String[] args) {
@@ -27,16 +26,12 @@ public class FiboncciSeries {
 
     public static int naiveFib(int n) {
 
+        // This method is greedy in nature
         if (n == 0) {
-            
             return 0;
-        }
-        else if(n == 1){
-           
-           return 1;
-        }
-        
-        else {
+        } else if (n == 1) {
+            return 1;
+        } else {
             return naiveFib(n - 2) + naiveFib(n - 1);
         }
 
@@ -48,15 +43,15 @@ public class FiboncciSeries {
             return map.get(n);
         } else {
             if (n == 0) {
-               map.put(n, 0);
-        }
-        else if(n == 1){
-               map.put(n, 1);
-        } else {
-                map.put(n, memorizedFib(n-2) + memorizedFib(n - 1));
+                map.put(n, 0);
+            } else if (n == 1) {
+                map.put(n, 1);
+            } else {
+                map.put(n, memorizedFib(n - 2) + memorizedFib(n - 1));
             }
+
         }
-        
+
         return map.get(n);
 
     }
