@@ -20,11 +20,11 @@ public class FiboncciSeries {
         // TODO code application logic here
 
         map = new HashMap<>();
-        System.out.println("Fibonacci of 5 is: " + naiveFib(5));
+        System.out.println("Fibonacci of 5 is: " + bruteForceFib(5));
         System.out.println("Fibonacci of 5 is: " + memorizedFib(5));
     }
 
-    public static int naiveFib(int n) {
+    public static int bruteForceFib(int n) {
 
         // This method is greedy in nature
         if (n == 0) {
@@ -32,7 +32,7 @@ public class FiboncciSeries {
         } else if (n == 1) {
             return 1;
         } else {
-            return naiveFib(n - 2) + naiveFib(n - 1);
+            return bruteForceFib(n - 2) + bruteForceFib(n - 1);
         }
 
     }
