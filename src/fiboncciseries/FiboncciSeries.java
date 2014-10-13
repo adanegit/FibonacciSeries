@@ -14,9 +14,7 @@ import java.util.Map;
  */
 public class FiboncciSeries {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     private static Map<Integer, Integer> map;
 
     public static void main(String[] args) {
