@@ -27,9 +27,16 @@ public class FiboncciSeries {
 
     public static int naiveFib(int n) {
 
-        if (n == 0 || n == 1) {
-            return 1;
-        } else {
+        if (n == 0) {
+            
+            return 0;
+        }
+        else if(n == 1){
+           
+           return 1;
+        }
+        
+        else {
             return naiveFib(n - 2) + naiveFib(n - 1);
         }
 
@@ -40,9 +47,12 @@ public class FiboncciSeries {
         if (map.containsKey(n)) {
             return map.get(n);
         } else {
-            if (n == 0 || n == 1) {
-                map.put(n, 1);
-            } else {
+            if (n == 0) {
+               map.put(n, 0);
+        }
+        else if(n == 1){
+               map.put(n, 1);
+        } else {
                 map.put(n, memorizedFib(n-2) + memorizedFib(n - 1));
             }
         }
